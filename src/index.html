@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wbpack Exercise</title>
+    <title>leaderboard</title>
 </head>
+
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="title">
+        <h1>leaderboard</h1>
+    </div>
+    
+    <div class="container">
+        <div class="recent-score">
+            <div class="recent-title">
+                <h3>Recent scores</h3>
+                <button>reflesh</button>
+            </div>
+            <div class="recent-display">
+                <ul>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                    <li>
+                        <p>kazaneza: 100</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="add-score">
+            <h3 >Add your score</h3>
+            <form class="add-form">
+
+                <input type="text" id="name" name="name" placeholder="Your name" required="true"
+                    pattern="[A-Z][a-zA-Z]*" title="First leter have to be capital">
+                <input type="text" id="score" name="score" placeholder="Your score" required pattern="[0-9]+"
+                    title="Only numbers are allowed">
+                <button type="submit" id="add-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>

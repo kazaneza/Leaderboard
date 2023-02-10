@@ -49,7 +49,7 @@ body {
   gap: 20px;
 }
 
-.add-form {
+#add-form {
   display: flex;
   flex-direction: column;
   gap: 20px;

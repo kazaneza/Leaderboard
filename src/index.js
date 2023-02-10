@@ -1,14 +1,26 @@
-import _ from 'lodash';
 import './style.css';
+import { addScore, getScore } from './scores.js';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+document.getElementById('refresh-button').addEventListener('click', () => {
+  getScore();
+});
+
+document.getElementById('add-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  const user = document.getElementById('name').value;
+  const score = document.getElementById('score').value;
+  addScore(user, score);
+});
+
+function clearInputs() {
+  document.getElementById('name').value = '';
+  document.getElementById('score').value = '';
+}
+
+document.getElementById('add-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+  const user = document.getElementById('name').value;
+  const score = document.getElementById('score').value;
+  addScore(user, score);
+  clearInputs();
+});

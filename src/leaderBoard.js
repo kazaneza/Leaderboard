@@ -6,12 +6,13 @@ const createGame = () => {
       name: 'kazaneza',
     })
     .then((res) => {
-      console.log(res.data);
+      // eslint-disable-next-line
+      console.log(res.data); 
     })
     .catch((error) => {
+      // eslint-disable-next-line
       console.error(error);
     });
 };
 
 createGame();
-

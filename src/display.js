@@ -4,11 +4,15 @@ const displayScores = (scores) => {
   let counter = 1;
 
   scores.forEach((score) => {
-    const item = document.createElement('li');
-    item.innerHTML = `${counter}. ${score.user}: ${score.score}`;
-    scoresList.appendChild(item);
+    const li = document.createElement('li');
+    li.innerHTML = `${counter}. ${score.user}: ${score.score}`;
+
+    scoresList.appendChild(li);
     counter += 1;
   });
+
+  scoresList.style.overflowY = 'scroll';
+  scoresList.style.height = '300px';
 };
 
 export default displayScores;
